@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "gash_client"
+version = "0.0.1"
+description = "Client library for GraphDB Access Security Hub"
+authors = ["Gooddelo <ivan@gooddelo.com>"]
+maintainers = ["Max <SDback@gooddelo.com>"]
+readme = "README.md"
+license = "MIT"
+keywords = ["python", "rabbitmq", "faststream", "gash", "pydantic"]
+homepage = "https://github.com/gooddelo/gash"
+repository = "https://github.com/gooddelo/gash"
+documentation = "https://github.com/gooddelo/gash#readme"
+packages = [{ include = "gash_client" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+faststream = {extras = ["rabbit"], version = "^0.4.5"}
+
+[tool.poetry.group.dev.dependencies]
+pytest-asyncio = "0.21.1"
+pydantic-settings = "^2.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
