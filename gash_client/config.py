@@ -1,10 +1,12 @@
 from faststream.rabbit import RabbitExchange, RabbitQueue
 from faststream.rabbit.shared.utils import build_url
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from yarl import URL
 
 
 class AMQPConfig(BaseSettings):
+    model_config = SettingsConfigDict(env_prefix='RABBITMQ_')
+
     host: str = 'localhost'
     port: int = '5672'
     default_user: str = 'admin'
