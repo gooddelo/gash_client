@@ -27,7 +27,7 @@ async def test_update_user():
 
 
 @pytest.mark.asyncio
-async def test_update_user_2():
+async def test_update_user_3():
     broker = RabbitBroker(AMQP_CONFIG.connection_url())
     await broker.connect()
     client = GashClient(broker)
