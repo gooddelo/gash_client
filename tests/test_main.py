@@ -24,3 +24,12 @@ async def test_update_user():
     client = GashClient(broker)
     await client.user_update(UserUpdateDTO(id_=f'{uuid4()}', old_role='client', new_role='client'))
     await broker.close()
+
+
+@pytest.mark.asyncio
+async def test_update_user_2():
+    broker = RabbitBroker(AMQP_CONFIG.connection_url())
+    await broker.connect()
+    client = GashClient(broker)
+    await client.user_update(UserUpdateDTO(id_=f'{uuid4()}', old_role='client', new_role='owner'))
+    await broker.close()
