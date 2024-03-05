@@ -3,7 +3,7 @@ from uuid import uuid4
 import pytest
 from faststream.rabbit import RabbitBroker
 
-from gash_client.config import AMQP_CONFIG
+from tests.conftest import AMQP_CONFIG
 from gash_client.core.client import GashClient
 from gash_client.core.user.dto import UserCreateDTO
 

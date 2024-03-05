@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gash_client"
-version = "0.0.1"
+version = "0.1.1"
 description = "Client library for GraphDB Access Security Hub"
 authors = ["Gooddelo <ivan@gooddelo.com>"]
 maintainers = ["Max <SDback@gooddelo.com>"]
